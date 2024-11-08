@@ -9,5 +9,8 @@
         <module name="Space-Invaders-Original" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="VerificacionValidacion" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
