@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AlienTest {
     Alien alien;
+
+    //TEST CONSTRUCTORES
     @org.junit.jupiter.api.Test
     void Constructor1(){
         alien = new Alien(0,150);
@@ -58,6 +60,101 @@ public class AlienTest {
         assertEquals(150,alien.getX());
         assertEquals(349,alien.getY());
     }
+
+    //TEST INITALIEN
+    @org.junit.jupiter.api.Test
+    void initAlien1(){
+        alien = new Alien(0,0);
+        alien.initAlien(-1,175);
+        assertEquals(0,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien2(){
+        alien = new Alien(0,0);
+        alien.initAlien(0,175);
+        assertEquals(0,alien.getX());
+        assertEquals(175,alien.getY());
+    } @org.junit.jupiter.api.Test
+    void initAlien3(){
+        alien = new Alien(0,0);
+        alien.initAlien(1,175);
+        assertEquals(1,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien4(){
+        alien = new Alien(0,0);
+        alien.initAlien(175,-1);
+        assertEquals(175,alien.getX());
+        assertEquals(0,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien5(){
+        alien = new Alien(0,0);
+        alien.initAlien(175,0);
+        assertEquals(175,alien.getX());
+        assertEquals(0,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien6(){
+        alien = new Alien(0,0);
+        alien.initAlien(175,1);
+        assertEquals(175,alien.getX());
+        assertEquals(1,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien7(){
+        alien = new Alien(0,0);
+        alien.initAlien(175,175);
+        assertEquals(175,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien8(){
+        alien = new Alien(0,0);
+        alien.initAlien(358,175);
+        assertEquals(358,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien9(){
+        alien = new Alien(0,0);
+        alien.initAlien(357,175);
+        assertEquals(357,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien10(){
+        alien = new Alien(0,0);
+        alien.initAlien(359,175);
+        assertEquals(358,alien.getX());
+        assertEquals(175,alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien11() {
+        alien = new Alien(0,0);
+        alien.initAlien(175, 350);
+        assertEquals(175, alien.getX());
+        assertEquals(350, alien.getY());
+    }
+    @org.junit.jupiter.api.Test
+    void initAlien12() {
+        alien = new Alien(0,0);
+        alien.initAlien(175, 349);
+        assertEquals(175, alien.getX());
+        assertEquals(349, alien.getY());
+    }@org.junit.jupiter.api.Test
+    void initAlien13() {
+        alien = new Alien(0,0);
+        alien.initAlien(175, 351);
+        assertEquals(175, alien.getX());
+        assertEquals(350, alien.getY());
+    }
+
+
+
+
 
 
 
