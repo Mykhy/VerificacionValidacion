@@ -166,6 +166,17 @@ public class AlienTest {
         alien.act(0);
         assertEquals(175,alien.getX());
     }
+    @org.junit.jupiter.api.Test
+    void actAlien4(){
+        alien = new Alien(358,0);
+        alien.act(1);
+        assertEquals(358,alien.getX());
+    }
+    @org.junit.jupiter.api.Test
+    void actAlien5(){
+        alien.act(-1);
+        assertEquals(0,alien.getX());
+    }
 
 
 
