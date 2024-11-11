@@ -144,12 +144,34 @@ public class AlienTest {
         alien.initAlien(175, 349);
         assertEquals(175, alien.getX());
         assertEquals(349, alien.getY());
-    }@org.junit.jupiter.api.Test
+    }
+    @org.junit.jupiter.api.Test
     void initAlien13() {
         alien = new Alien(0,0);
         alien.initAlien(175, 351);
         assertEquals(175, alien.getX());
         assertEquals(350, alien.getY());
+    }
+
+
+    //test de act
+    @org.junit.jupiter.api.Test
+    void actAlien1(){
+        alien = new Alien(175,0);
+        alien.act(1);
+        assertEquals(176,alien.getX());
+    }
+    @org.junit.jupiter.api.Test
+    void actAlien2(){
+        alien = new Alien(175,0);
+        alien.act(-1);
+        assertEquals(174,alien.getX());
+    }
+    @org.junit.jupiter.api.Test
+    void actAlien3(){
+        alien = new Alien(175,0);
+        alien.act(0);
+        assertEquals(175,alien.getX());
     }
 
 
