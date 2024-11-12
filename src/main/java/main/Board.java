@@ -79,8 +79,7 @@ public class Board extends JPanel {
      * Incializa la partida.
      * Crea las filas de alienígenas, asignando a cada uno su posición inicial
      * */
-    //se puede cambiar a protected o llamar a otra funcion para invacar
-    protected void gameInit() {
+    public void gameInit() {
 
         this.aliens = new ArrayList<>();
 
@@ -230,7 +229,7 @@ public class Board extends JPanel {
      * Si se han destruido todos los alienígenas, el juego finaliza la partida.
      * Si no se han destruido, actualiza el estado del juego.
      * */
-    private void update() {
+    public void update() {
 
         if (deaths == Commons.CHANCE) {
             inGame = false;

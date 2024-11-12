@@ -17,13 +17,30 @@ public class BoardTest {
         board = new Board();
     }
 
-    @Test
-    void testInitialSetup() {
-        // Verificar que el tablero esté configurado correctamente
-        assertNotNull(board.getPlayer(), "El jugador no debería ser nulo después de la inicialización.");
-        assertNotNull(board.getAliens(), "La lista de alienígenas no debería ser nula.");
-        assertFalse(board.getAliens().isEmpty(), "La lista de alienígenas no debería estar vacía después de la inicialización.");
-        assertNotNull(board.getShot(), "El disparo inicial no debería ser nulo.");
+    @org.junit.jupiter.api.Test
+    void gameInitTest() {
+        board.gameInit();
+        assertEquals(Commons.NUMBER_OF_ALIENS_TO_DESTROY, board.getAliens().size());
+        assertNotNull(board.getPlayer());
+        assertNotNull(board.getShot());
+        /*for(int i = 0; i < Commons.NUMBER_OF_ALIENS_TO_DESTROY;i++){
+            se supone que no sabemos las filas y las columnas?
+        }*/
+
+    }
+    //TEST UPDATE
+    @org.junit.jupiter.api.Test
+    void update1(){
+        board.gameInit();
+        board.setDeaths(Commons.NUMBER_OF_ALIENS_TO_DESTROY);
+        board.update();
+        assertEquals(false, board.isInGame());
+    }
+    @org.junit.jupiter.api.Test
+    void update2(){
+        board.gameInit();
+        board.update();
+        assertEquals(true, board.isInGame());
     }
 
 }
